@@ -17,9 +17,9 @@ const scrapeController = async (browserInstance) => {
         prodPromise.push(await scrapers.scraper(browser, link));
     }
     const rs = await Promise.all(prodPromise);
-    fs.writeFile("ecommerce.json", JSON.stringify(rs), (err) => {
+    fs.writeFile("ecommerce2.json", JSON.stringify(rs), (err) => {
       if (err) console.log("Ghi data vô file json thất bại: " + err);
-      console.log("Thêm data thanh công !.");
+      console.log("Thêm data thành công !.");
     });
     await browser.close();
   } catch (e) {
